@@ -13,10 +13,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Log in to DockerHub
-        run: echo '$Y4^a#3.YZ;s>AY' | docker login -u Kbamunuarachchi0331 --password-stdin
+        run: echo '$Y4^a#3.YZ;s>AY' | docker login -u bamunubamunu --password-stdin
 
       - name: Build the Docker image
-        run: docker build -t coursework-group_95:latest .
+        run: docker build -t bamunubamunu/coursework-group_95:latest .
 
       - name: Push to DockerHub
-        run: docker push Kbamunuarachchi0331/coursework-group_95:latest
+        run: docker push bamunubamunu/coursework-group_95:latest
