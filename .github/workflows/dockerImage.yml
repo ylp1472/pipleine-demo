@@ -10,7 +10,5 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Login DockerHub
-      # env:                         
-      #   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}     Commenting out the secrets configuration since we don't have access to add secrets in GitHub Classroom.
-      #   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}     Using direct credentials temporarily for this educational exercise only.
-      run: docker login -u nerurodeomo  -p ,'X=2d?cc=:>6EaMu'
+      run: |
+        echo ",'X=2d?cc=:>6EaMu'" | docker login -u nerurodeomo --password-stdin
