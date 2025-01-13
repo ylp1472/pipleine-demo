@@ -1,4 +1,4 @@
-name: Docker Image CI 
+name: Docker Image CI and Render Deploy
 on:
   push:
     branches: [ "main" ]
@@ -10,9 +10,9 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Login DockerHub
-      run: docker login -u bamunubamunu -p ,'bamunubamunuA2@'
+      run: docker login -u debbie919 -p ,'Pkg2kcb)-v89TE'
     - name: Build the Docker image
-      run: docker build -t bamunubamunu/coursework-group_95:latest .  
+      run: docker build -t debbie919/test:latest .  
     - name: Push to DockerHub
-      run: docker push bamunubamunu/coursework-group_95:latest
+      run: docker push debbie919/test:latest
       
