@@ -1,18 +1,22 @@
-name: Docker Image CI and Render Deploy
+name: Docker Image CI
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Login DockerHub
-      run: docker login -u Kbamunuarachchi0331 -p ,'$Y4^a#3.YZ;s>AY'
-    - name: Build the Docker image
-      run: docker build -t debbie919/test:latest .  
-    - name: Push to DockerHub
-      run: docker push debbie919/test:latest
-      
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to DockerHub
+        run: echo 'dckr_pat_KQAx1hXN4UjM2HmLLKzXPfGSmtA' | docker login -u kbamunuarachchi0331 --password-stdin
+
+      - name: Build the Docker image
+        run: docker build -t kbamunuarachchi0331/coursework-group_95:latest .
+
+      - name: Push to DockerHub
+        run: docker push kbamunuarachchi0331/coursework-group_95:latest
