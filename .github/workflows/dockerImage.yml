@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Login DockerHub
-      run: docker login -u debbie919 -p ,'Pkg2kcb)-v89TE'
+      run: docker login -u Kbamunuarachchi0331 -p ,'$Y4^a#3.YZ;s>AY'
     - name: Build the Docker image
       run: docker build -t debbie919/test:latest .  
     - name: Push to DockerHub
