@@ -13,7 +13,7 @@ jobs:
       # env:                         
       #   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}     Commenting out the secrets configuration since we don't have access to add secrets in GitHub Classroom.
       #   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}     Using direct credentials temporarily for this educational exercise only.
-      run: docker login -u kalanabamunuarachchi -p ,'Kalana123$'
+      run: docker login -u kalanabamunuarachchi  -p ,'Kalana123$'
     - name: Build the Docker image
       run: docker build -t debbie919/coursework-group_14:latest .  
     - name: Push to DockerHub
