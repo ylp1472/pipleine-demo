@@ -13,10 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Log in to DockerHub
-        env:
-          DOCKER_USERNAME: Kbamunuarachchi0331
-          DOCKER_PASSWORD: "$Y4^a#3.YZ;s>AY"
-        run: echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+        run: echo '$Y4^a#3.YZ;s>AY' | docker login -u Kbamunuarachchi0331 --password-stdin
 
       - name: Build the Docker image
         run: docker build -t coursework-group_95:latest .
