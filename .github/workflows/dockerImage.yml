@@ -1,14 +1,16 @@
-name: Docker Image 
+name: ci
+
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: main
+
 jobs:
-  build-and-deploy:
+  login:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - name: Login DockerHub
-      run: |
-        echo ",'X=2d?cc=:>6EaMu'" | docker login -u nerurodeomo --password-stdin
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ vars.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
