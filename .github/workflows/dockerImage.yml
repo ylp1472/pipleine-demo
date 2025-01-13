@@ -11,8 +11,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          username: Kbamunuarachchi0331
-          password: $Y4^a#3.YZ;s>AY
+          username: bamunubamunu
+          password: bamunubamunuA2@
 
       - name: Build the Docker image
         run: docker build -t nerurodeomo/coursework-group_14:latest .
